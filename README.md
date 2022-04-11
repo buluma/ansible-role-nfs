@@ -25,6 +25,15 @@ This example is taken from `molecule/default/converge.yml` and is tested on each
     - role: buluma.nfs
 ```
 
+The machine needs to be prepared. In CI this is done using `molecule/default/prepare.yml`:
+```yaml
+---
+
+- hosts: all
+  roles:
+    - name: buluma.bootstrap
+```
+
 
 ## [Role Variables](#role-variables)
 
@@ -41,6 +50,13 @@ nfs_rpcbind_enabled: true
 
 - pip packages listed in [requirements.txt](https://github.com/buluma/ansible-role-nfs/blob/main/requirements.txt).
 
+## [Status of used roles](#status-of-requirements)
+
+The following roles are used to prepare a system. You can prepare your system in another way.
+
+| Requirement | GitHub | GitLab |
+|-------------|--------|--------|
+|[buluma.bootstrap](https://galaxy.ansible.com/buluma/bootstrap)|[![Build Status GitHub](https://github.com/buluma/ansible-role-bootstrap/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-bootstrap/actions)|[![Build Status GitLab ](https://gitlab.com/buluma/ansible-role-bootstrap/badges/main/pipeline.svg)](https://gitlab.com/buluma/ansible-role-bootstrap)|
 
 ## [Context](#context)
 
