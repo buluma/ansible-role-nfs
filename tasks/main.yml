@@ -10,12 +10,10 @@
     - ansible_distribution == "Fedora"
 
 # Setup/install tasks.
-- name: Setup RedHat
-  ansible.builtin.import_tasks: setup-RedHat.yml
+- ansible.builtin.import_tasks: setup-RedHat.yml
   when: ansible_os_family == 'RedHat'
 
-- name: Setup Debian
-  ansible.builtin.import_tasks: setup-Debian.yml
+- ansible.builtin.import_tasks: setup-Debian.yml
   when: ansible_os_family == 'Debian'
 
 - name: Ensure directories to export exist
