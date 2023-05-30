@@ -1,0 +1,6 @@
+---
+
+- hosts: all
+  tasks:
+    - name: check version installed
+      command: nfsstat –s
