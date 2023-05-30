@@ -1,6 +1,6 @@
 ---
-- name: Ensure NFS utilities are installed.
-  apt:
+- name: setup-Debian | Ensure NFS utilities are installed.
+  ansible.builtin.apt:
     name:
       - nfs-common
       - nfs-kernel-server
