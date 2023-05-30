@@ -6,4 +6,4 @@ _nfs_requirements:
     - nfs-kernel-server
 
 # TODO: Localise to one varriable file
-nfs_requirements: "{{ _nfs_requirements[ansible_os_family] | default(_nfs_requirements['default'] ) }}"
+nfs_requirements: "{{ _nfs_requirements[ansible_os_family] | default(_nfs_requirements['default']) }}"

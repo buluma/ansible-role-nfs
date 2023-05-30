@@ -10,10 +10,12 @@
     - ansible_distribution == "Fedora"
 
 # Setup/install tasks.
-- include_tasks: setup-RedHat.yml
+- name: Setup RedHat
+  ansible.builtin.import_tasks: setup-RedHat.yml
   when: ansible_os_family == 'RedHat'
 
-- include_tasks: setup-Debian.yml
+- name: Setup Debian
+  ansible.builtin.import_tasks: setup-Debian.yml
   when: ansible_os_family == 'Debian'
 
 - name: Ensure directories to export exist
@@ -29,7 +31,7 @@
     owner: root
     group: root
     mode: 0644
-  notify: reload nfs
+  notify: Reload nfs
 
 - name: Ensure nfs is running.
   ansible.builtin.service: "name={{ nfs_server_daemon }} state=started enabled=yes"
