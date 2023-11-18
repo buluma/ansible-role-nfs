@@ -1,10 +1,10 @@
-# [nfs](#nfs)
+# [Ansible role nfs](#nfs)
 
 NFS installation for Linux.
 
-|GitHub|GitLab|Quality|Downloads|Version|Issues|Pull Requests|
-|------|------|-------|---------|-------|------|-------------|
-|[![github](https://github.com/buluma/ansible-role-nfs/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-nfs/actions)|[![gitlab](https://gitlab.com/shadowwalker/ansible-role-nfs/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-nfs)|[![quality](https://img.shields.io/ansible/quality/58767)](https://galaxy.ansible.com/buluma/nfs)|[![downloads](https://img.shields.io/ansible/role/d/58767)](https://galaxy.ansible.com/buluma/nfs)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-nfs.svg)](https://github.com/buluma/ansible-role-nfs/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-nfs.svg)](https://github.com/buluma/ansible-role-nfs/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-nfs.svg)](https://github.com/buluma/ansible-role-nfs/pulls/)|
+|GitHub|GitLab|Downloads|Version|Issues|Pull Requests|
+|------|------|-------|-------|------|-------------|
+|[![github](https://github.com/buluma/ansible-role-nfs/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-nfs/actions)|[![gitlab](https://gitlab.com/shadowwalker/ansible-role-nfs/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-nfs)|[![downloads](https://img.shields.io/ansible/role/d/4778)](https://galaxy.ansible.com/buluma/nfs)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-nfs.svg)](https://github.com/buluma/ansible-role-nfs/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-nfs.svg)](https://github.com/buluma/ansible-role-nfs/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-nfs.svg)](https://github.com/buluma/ansible-role-nfs/pulls/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -15,12 +15,6 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
 - name: Converge
   hosts: all
   become: true
-
-  pre_tasks:
-    - name: Update apt cache.
-      apt: update_cache=yes cache_valid_time=600
-      when: ansible_os_family == 'Debian'
-      changed_when: false
 
   roles:
     - role: buluma.nfs
