@@ -24,8 +24,11 @@ The machine needs to be prepared. In CI this is done using [`molecule/default/pr
 
 ```yaml
 ---
+- name: Prepare
+  hosts: all
+  gather_facts: no
+  become: yes
 
-- hosts: all
   roles:
     - name: buluma.bootstrap
 ```
