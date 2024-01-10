@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/buluma/ansible-role-nfs/tree/HEAD)
+
+[Full Changelog](https://github.com/buluma/ansible-role-nfs/compare/v0.2.0...HEAD)
+
+**Merged pull requests:**
+
+- Bump actions/checkout from 3 to 4 [\#17](https://github.com/buluma/ansible-role-nfs/pull/17) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [v0.2.0](https://github.com/buluma/ansible-role-nfs/tree/v0.2.0) (2024-01-06)
 
 [Full Changelog](https://github.com/buluma/ansible-role-nfs/compare/v0.1.3...v0.2.0)
