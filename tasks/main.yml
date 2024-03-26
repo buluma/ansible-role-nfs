@@ -34,5 +34,5 @@
   notify: Reload nfs
 
 - name: Ensure nfs is running.
-  ansible.builtin.service: "name={{ nfs_server_daemon }} state=started enabled=yes"
+  ansible.builtin.service: "name={{ nfs_server_daemon }} state=started enabled=true"
   when: nfs_exports|length
