@@ -11,22 +11,22 @@ galaxy_info:
     - name: EL
       versions:
         - all
-  - name: Fedora
-    versions:
-    - all
-  - name: Debian
-    versions:
-    - all
-  - name: Ubuntu
-    versions:
-    - all
-  - name: Kali
-    versions:
-    - all
+    - name: Fedora
+      versions:
+        - all
+    - name: Debian
+      versions:
+        - all
+    - name: Ubuntu
+      versions:
+        - all
+    - name: Kali
+      versions:
+        - all
   galaxy_tags:
     - system
-  - nfs
-  - filesystem
-  - share
-  - nfsv4
-  - efs
+    - nfs
+    - filesystem
+    - share
+    - nfsv4
+    - efs
