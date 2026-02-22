@@ -11,26 +11,22 @@ NFS installation for Linux.
 This example is taken from [`molecule/default/converge.yml`](https://github.com/buluma/ansible-role-nfs/blob/master/molecule/default/converge.yml) and is tested on each push, pull request and release.
 
 ```yaml
----
-- name: Converge
+- become: true
   hosts: all
-  become: true
-
+  name: Converge
   roles:
-    - role: buluma.nfs
+  - role: buluma.nfs
 ```
 
 The machine needs to be prepared. In CI this is done using [`molecule/default/prepare.yml`](https://github.com/buluma/ansible-role-nfs/blob/master/molecule/default/prepare.yml):
 
 ```yaml
----
-- name: Prepare
-  hosts: all
+- become: true
   gather_facts: false
-  become: true
-
+  hosts: all
+  name: Prepare
   roles:
-    - name: buluma.bootstrap
+  - name: buluma.bootstrap
 ```
 
 Also see a [full explanation and example](https://buluma.github.io/how-to-use-these-roles.html) on how to use these roles.
@@ -40,11 +36,9 @@ Also see a [full explanation and example](https://buluma.github.io/how-to-use-th
 The default values for the variables are set in [`defaults/main.yml`](https://github.com/buluma/ansible-role-nfs/blob/master/defaults/main.yml):
 
 ```yaml
----
 nfs_exports: []
-
-nfs_rpcbind_state: started
 nfs_rpcbind_enabled: true
+nfs_rpcbind_state: started
 ```
 
 ## [Requirements](#requirements)

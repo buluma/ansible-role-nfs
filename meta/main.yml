@@ -1,32 +1,31 @@
----
 dependencies: []
 galaxy_info:
-  role_name: nfs
   author: buluma
-  description: NFS installation for Linux.
   company: ShadowNet
+  description: NFS installation for Linux.
+  galaxy_tags:
+  - system
+  - nfs
+  - filesystem
+  - share
+  - nfsv4
+  - efs
   license: Apache-2.0
   min_ansible_version: '2.12'
   platforms:
-    - name: EL
-      versions:
-        - all
-    - name: Fedora
-      versions:
-        - all
-    - name: Debian
-      versions:
-        - all
-    - name: Ubuntu
-      versions:
-        - all
-    - name: Kali
-      versions:
-        - all
-  galaxy_tags:
-    - system
-    - nfs
-    - filesystem
-    - share
-    - nfsv4
-    - efs
+  - name: EL
+    versions:
+    - all
+  - name: Fedora
+    versions:
+    - all
+  - name: Debian
+    versions:
+    - all
+  - name: Ubuntu
+    versions:
+    - all
+  - name: Kali
+    versions:
+    - all
+  role_name: nfs
