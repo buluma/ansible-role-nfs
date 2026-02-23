@@ -1,6 +1,6 @@
 ---
-  - become: true
-    hosts: all
-    name: Converge
-    roles:
-      - role: buluma.nfs
+- become: true
+  hosts: all
+  name: Converge
+  roles:
+  - role: buluma.nfs
