@@ -1,7 +1,5 @@
----
-- name: Converge
+- become: true
   hosts: all
-  become: true
-
+  name: Converge
   roles:
-    - role: ansible-role-nfs
+  - role: buluma.nfs

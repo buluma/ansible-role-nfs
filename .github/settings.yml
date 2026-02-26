@@ -5,4 +5,4 @@
 repository:
   description: NFS installation for Linux.
   homepage: https://buluma.github.io/
-  topics: system, nfs, filesystem, share, nfsv4, efs, ansible, molecule, tox, playbook
+  topics: system, nfs, filesystem, share, nfsv4, efs, ansible, molecule, playbook
