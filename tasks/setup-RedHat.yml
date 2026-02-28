@@ -1,7 +1,8 @@
-- ansible.builtin.package: name=nfs-utils state=present
-  name: setup-RedHat | Ensure NFS utilities are installed.
-- ansible.builtin.service:
-    enabled: '{{ nfs_rpcbind_enabled }}'
-    name: rpcbind
-    state: '{{ nfs_rpcbind_state }}'
-  name: setup-RedHat | Ensure rpcbind is running as configured.
+---
+  - ansible.builtin.package: name=nfs-utils state=present
+    name: setup-RedHat | Ensure NFS utilities are installed.
+  - ansible.builtin.service:
+      enabled: '{{ nfs_rpcbind_enabled }}'
+      name: rpcbind
+      state: '{{ nfs_rpcbind_state }}'
+    name: setup-RedHat | Ensure rpcbind is running as configured.

@@ -1,29 +1,31 @@
-- ansible.builtin.include_vars: '{{ ansible_os_family }}.yml'
-  name: Include OS-specific variables.
-- ansible.builtin.include_vars: Fedora.yml
-  name: Include overrides specific to Fedora.
-  when:
-  - ansible_os_family == 'RedHat'
-  - ansible_distribution == "Fedora"
-- ansible.builtin.import_tasks: setup-RedHat.yml
-  name: Setup/install tasks RedHat.
-  when: ansible_os_family == 'RedHat'
-- ansible.builtin.import_tasks: setup-Debian.yml
-  name: Setup/install tasks Debian
-  when: ansible_os_family == 'Debian'
-- ansible.builtin.file:
-    path: '{{ item.strip().split()[0] }}'
-    state: directory
-  name: Ensure directories to export exist
-  with_items: '{{ nfs_exports }}'
-- ansible.builtin.template:
-    dest: /etc/exports
-    group: root
-    mode: 420
-    owner: root
-    src: exports.j2
-  name: Copy exports file.
-  notify: Reload nfs
-- ansible.builtin.service: name={{ nfs_server_daemon }} state=started enabled=true
-  name: Ensure nfs is running.
-  when: nfs_exports|length
+---
+  - ansible.builtin.include_vars: '{{ ansible_os_family }}.yml'
+    name: Include OS-specific variables.
+  - ansible.builtin.include_vars: Fedora.yml
+    name: Include overrides specific to Fedora.
+    when:
+      - ansible_os_family == 'RedHat'
+      - ansible_distribution == "Fedora"
+  - ansible.builtin.import_tasks: setup-RedHat.yml
+    name: Setup/install tasks RedHat.
+    when: ansible_os_family == 'RedHat'
+  - ansible.builtin.import_tasks: setup-Debian.yml
+    name: Setup/install tasks Debian
+    when: ansible_os_family == 'Debian'
+  - ansible.builtin.file:
+      path: '{{ item.strip().split()[0] }}'
+      state: directory
+    name: Ensure directories to export exist
+    with_items: '{{ nfs_exports }}'
+  - ansible.builtin.template:
+      dest: /etc/exports
+      group: root
+      mode: 420
+      owner: root
+      src: exports.j2
+    name: Copy exports file.
+    notify: Reload nfs
+  - ansible.builtin.service: name={{ nfs_server_daemon }} state=started 
+      enabled=true
+    name: Ensure nfs is running.
+    when: nfs_exports|length
