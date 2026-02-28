@@ -25,7 +25,7 @@
       src: exports.j2
     name: Copy exports file.
     notify: Reload nfs
-  - ansible.builtin.service: name={{ nfs_server_daemon }} state=started 
+  - ansible.builtin.service: name={{ nfs_server_daemon }} state=started
       enabled=true
     name: Ensure nfs is running.
     when: nfs_exports|length
