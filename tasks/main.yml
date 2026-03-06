@@ -14,6 +14,7 @@
   when: ansible_os_family == 'Debian'
 - name: Ensure directories to export exist
   ansible.builtin.file:
+    mode: "0755"
     path: "{{ item.strip().split()[0] }}"
     state: directory
   with_items: "{{ nfs_exports }}"
