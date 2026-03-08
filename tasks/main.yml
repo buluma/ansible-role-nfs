@@ -25,7 +25,9 @@
     mode: "0644"
     owner: root
     src: exports.j2
-  notify: Reload nfs
+  notify:
+    - Reload nfs
+  # Separator for the pre-commit handler parser.
 - name: Ensure nfs is running.
   ansible.builtin.service:
     name: "{{ nfs_server_daemon }}"
