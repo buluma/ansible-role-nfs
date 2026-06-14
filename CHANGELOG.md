@@ -1,13 +1,20 @@
 # Changelog
 
-## [Unreleased](https://github.com/buluma/ansible-role-nfs/tree/HEAD)
+## [v26.6.0](https://github.com/buluma/ansible-role-nfs/tree/v26.6.0) (2026-06-14)
 
-[Full Changelog](https://github.com/buluma/ansible-role-nfs/compare/v24.3.31...HEAD)
+[Full Changelog](https://github.com/buluma/ansible-role-nfs/compare/v24.3.31...v26.6.0)
 
 **Closed issues:**
 
 - Update action [\#15](https://github.com/buluma/ansible-role-nfs/issues/15)
 - rebuild action [\#14](https://github.com/buluma/ansible-role-nfs/issues/14)
+
+**Merged pull requests:**
+
+- Bump ansible/ansible-lint from 26.1.1 to 26.2.0 [\#31](https://github.com/buluma/ansible-role-nfs/pull/31) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump actions/checkout from 4 to 6 [\#30](https://github.com/buluma/ansible-role-nfs/pull/30) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump actions/setup-python from 5 to 6 [\#29](https://github.com/buluma/ansible-role-nfs/pull/29) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump release-drafter/release-drafter from 5 to 6 [\#27](https://github.com/buluma/ansible-role-nfs/pull/27) ([dependabot[bot]](https://github.com/apps/dependabot))
 
 ## [v24.3.31](https://github.com/buluma/ansible-role-nfs/tree/v24.3.31) (2024-03-29)
 
