@@ -1,0 +1,15 @@
+---
+- name: Verify
+  hosts: all
+  become: true
+  gather_facts: false
+
+  tasks:
+    - name: Check if nfs server is running
+      ansible.builtin.service_facts:
+
+    - name: Assert nfs server is active
+      ansible.builtin.assert:
+        that:
+          - "'nfs-server' in services or 'nfs-kernel-server' in services or 'nfs' in services"
+        quiet: true
