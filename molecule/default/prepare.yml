@@ -4,4 +4,4 @@
   gather_facts: false
   hosts: all
   roles:
-    - name: buluma.bootstrap
+    - role: buluma.bootstrap
