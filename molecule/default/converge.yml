@@ -1,7 +1,5 @@
 ---
 - name: Converge
-  become: true
-- name: Converge
   hosts: all
   roles:
     - role: buluma.nfs
