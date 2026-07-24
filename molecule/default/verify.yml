@@ -11,5 +11,7 @@
     - name: Assert nfs server is active
       ansible.builtin.assert:
         that:
-          - "'nfs-server' in services or 'nfs-kernel-server' in services or 'nfs' in services"
+          - >-
+            'nfs-server' in services or 'nfs-kernel-server' in services or 'nfs' in services or
+            'nfs-server.service' in services or 'nfs-kernel-server.service' in services or 'nfs.service' in services
         quiet: true
